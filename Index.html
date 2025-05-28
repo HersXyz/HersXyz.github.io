@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kota Gresik - Informasi dan Sejarah</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #27ae60);
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  header {
+    position: relative;
+    background-color: #1b5e20;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2.8rem;
+    letter-spacing: 1.4px;
+    flex-grow: 1;
+  }
+
+  /* Three-dot menu container */
+  .menu-container {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  /* Menu button: vertical three dots */
+  .menu-button {
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    user-select: none;
+  }
+
+  /* Dropdown menu */
+  .menu-dropdown {
+    position: absolute;
+    top: 2.8rem;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+  }
+
+  .menu-dropdown a {
+    color: #1b5e20;
+    text-decoration: none;
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .menu-dropdown a:last-child {
+    border-bottom: none;
+  }
+
+  .menu-dropdown a:hover {
+    background-color: #e8f5e9;
+  }
+
+  /* TikTok icon style using SVG inline */
+  .menu-dropdown a svg {
+    width: 20px;
+    height: 20px;
+    fill: #000000;
+  }
+
+  main {
+    background: white;
+    color: #333;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    color: #1b5e20;
+    margin-top: 0;
+    font-weight: 600;
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 6px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  ul li {
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    font-size: 1.05rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .gallery figure {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: #f9f9f9;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery figure:hover {
+    transform: scale(1.03);
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery figcaption {
+    padding: 0.75rem 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #1b5e20;
+    background: #e8f5e9;
+    text-align: center;
+  }
+
+  footer {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #1b5e20cc;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 1rem;
+    }
+    main {
+      padding: 1.5rem 1.5rem;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Kota Gresik</h1>
+  <div class="menu-container">
+    <button class="menu-button" aria-label="Menu" aria-expanded="false" aria-controls="menu-dropdown">⋮</button>
+    <nav class="menu-dropdown" id="menu-dropdown" role="menu">
+      <a href="https://www.tiktok.com/@hers_aja888" target="_blank" rel="noopener" role="menuitem">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.86 3.8v10.45c0 2.41-1.75 5.83-5.83 5.83l-.4-1.44c3.4 0 4.62-2.3 4.62-4.39V5.25h1.6zm3.6 13.92a2.65 2.65 0 01-2.65-2.64v-.1l-1.55.01v.08a4.19 4.19 0 004.16 4.22c.14 0 .29 0 .43-.02v-2.43zm-1.57-13.5l4.06-1.53v4.69l-4.05-1.2v-1.96z"/></svg>
+        TikTok
+      </a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section>
+    <h2>Sejarah Singkat</h2>
+    <p>
+      Kota Gresik, yang terletak di Provinsi Jawa Timur, merupakan salah satu kota pelabuhan tertua dan terpenting di Pulau Jawa. 
+      Sejarahnya berawal sejak abad ke-11 ketika Kerajaan Gresik menjadi pusat perdagangan sekaligus tempat penyebaran agama Islam di wilayah tersebut.
+    </p>
+  </section>
+  <section>
+    <h2>Keunikan dan Budaya</h2>
+    <p>
+      Gresik dikenal sebagai pusat industri keramik dan pelabuhan yang strategis di pesisir utara Jawa. 
+      Kota ini juga memiliki sejumlah situs bersejarah dan rumah ibadah penting, termasuk makam Wali Songo, Sunan Giri, yang sangat dihormati oleh masyarakat lokal.
+    </p>
+    <ul>
+      <li>Pelabuhan Gresik yang menjadi pusat perdagangan utama di Jawa Timur</li>
+      <li>Industri Semen Gresik, salah satu produsen semen terbesar di Indonesia</li>
+      <li>Kuliner khas seperti Sate Payang dan Sego Sambel Gresik yang menggugah selera</li>
+      <li>Beragam tradisi dan festival lokal yang terus dilestarikan oleh masyarakat</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Peran Penting Kota Gresik</h2>
+    <p>
+      Kota Gresik memegang peranan vital dalam perekonomian Jawa Timur serta Indonesia secara keseluruhan, khususnya di sektor industri dan perdagangan. 
+      Selain itu, Gresik juga menjadi pusat budaya dan keagamaan yang mendukung perkembangan sosial masyarakat sekitarnya.
+    </p>
+  </section>
+  <section>
+    <h2>Galeri Foto</h2>
+    <div class="gallery">
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAlB1YxnTXUHwGsgI4_UUDYxppxZW3Nia0ClAsARhppUt5_yM75yu7d8jj&amp;s=10" alt="Pelabuhan Gresik" />
+        <figcaption>Pelabuhan Gresik yang sibuk</figcaption>
+      </figure>
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7VQzPSVr4JRAn5TgdH9crCBnVHRllMoEiY7yr9liLfvN4J8lXb2Tzztv&amp;s=10" alt="Masjid Sunan Giri" />
+        <figcaption>Masjid Sunan Giri, situs bersejarah</figcaption>
+      </figure>
+      <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOdlpf5acHzGfxOGiAObgfmRG78WgnMh7KXWIpf3cNEeAMnWztBv0RvRTu&amp;s=10" alt="Mall Gresik" />
+        <figcaption>Icon Mall Gresik</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2024 Herzz Suka Nasgor Goreng. Semua hak dilindungi.</p>
+</footer>
+
+<script>
+  const menuButton = document.querySelector('.menu-button');
+  const menuDropdown = document.querySelector('.menu-dropdown');
+
+  menuButton.addEventListener('click', () => {
+    const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!expanded));
+    menuDropdown.style.display = expanded ? 'none' : 'flex';
+  });
+
+  // Close menu if click outside
+  document.addEventListener('click', (event) => {
+    if (!menuButton.contains(event.target) && !menuDropdown.contains(event.target)) {
+      menuDropdown.style.display = 'none';
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Automatic smooth scroll down until bottom
+  function autoScroll() {
+    const scrollStep = 1; // pixels per frame
+    const delay = 10; // ms between frame
+
+    let scrolling = true;
+
+    function scrollDown() {
+      if (!scrolling) return;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      if (scrollTop + windowHeight < docHeight) {
+        window.scrollBy(0, scrollStep);
+        setTimeout(scrollDown, delay);
+      } else {
+        scrolling = false; // stop scrolling at bottom
+      }
+    }
+
+    // Start scrolling after slight delay to allow page render
+    setTimeout(scrollDown, 1000);
+  }
+
+  window.addEventListener('load', () => {
+    autoScroll();
+  });
+</script>
+</body>
+</html>
+
